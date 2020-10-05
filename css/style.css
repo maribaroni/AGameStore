@@ -1,0 +1,201 @@
+.wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: lightseagreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "head head"
+                        "productss formss"
+                        "productss error";
+    grid-gap: 15px;                
+}
+
+body{
+    margin: 0;
+    background-color: white;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    align-content: center;
+}
+
+h2{
+    font-family: 'Baloo', cursive;
+    color: white;
+    text-shadow: 1px 0 1px black;
+}
+
+.header{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: bold;
+	text-align: center;
+	background-color: green;
+	color: white;
+    border: 5px solid darkgreen;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #2c2c2c;
+    padding: 3px;
+    grid-area: head;
+}
+
+.products{
+    text-align: center;
+    grid-area: productss;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-between;
+}
+    
+img{
+    max-width: 250px;
+    max-height: 350px;
+    box-shadow: 0 0 15px #2c2c2c;
+    padding: 10px;
+    float: left;
+    margin: 15px;
+}
+
+figcaption{
+    text-align: center;
+}
+
+.fillForm{
+    padding: 0;
+    grid-area: formss;
+    text-align: center;
+    align-items: flex-start;
+}
+
+form, .formData{
+    width: 80%;
+    border: 5px solid darkgreen;
+    box-shadow: 0 0 15px #2c2c2c;
+    padding: 10px;
+    padding-top: 20px;
+    margin: 10px auto;
+    margin-top: 0px;
+    color: white;
+    background-color: seagreen;
+    border-radius: 20px 0 20px 0;
+    font-family: 'Radley', serif;
+    font-weight: bold;
+}
+
+label{
+    width: 170px;
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
+input:not([type="radio"]), select{
+    font-size: 16px;
+    font-family: 'Pacifico', cursive;
+    padding: 5px 10px;
+}
+
+input:not([type="radio"]){
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+select{
+    width: 55%;
+    margin-top: 10px;
+}
+
+input[type="submit"]{
+    width: 50%;
+    font-size: 22px;
+    background-color: #bc2990;
+    color: white;
+    font-family: 'Radley', serif;
+    border: 0px;
+    padding: 10px;
+    height: 50px;
+    box-shadow: 4px 4px 0px #8c087a;
+    border-radius: 8px;
+}
+
+input[type="submit"]:active{
+    box-shadow: -4px -4px 0px #8c087a;
+}
+
+.errors{
+    display: none;
+    color: white;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px auto;
+    margin-top: 0px;
+    width: 80%;
+    background-color: seagreen;
+    border-radius: 20px 0 20px 0;
+    box-shadow: 0 0 15px #2c2c2c;
+    border: 5px solid darkgreen;
+    grid-area: error;
+}
+
+#invoice{
+    font-weight: bold;
+    width: 70%;
+    border: 5px solid darkgreen;
+    box-shadow: 0 0 15px #2c2c2c;
+    padding: 30px;
+    margin: 10px auto;
+    margin-top: 0px;
+    color: darkgreen;
+    background-color: white;
+    border-radius: 20px 0 20px 0;
+    box-shadow: 0 0 15px #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    grid-area: formss;
+    font-family: 'Radley', serif;
+}
+
+table{
+    flex-grow: 5;
+}
+
+@media(min-width:320px){
+    .wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: "head"
+                            "productss"
+                            "formss"
+                            "error";
+        grid-gap: 15px;
+        }
+}
+
+@media(min-width:480px){
+    .wrapper{
+        grid-template-columns: 1fr fr;
+        grid-template-areas: "head head"
+                            "productss formss"
+                            "productss error";
+        grid-gap: 15px;
+        }
+}
+
+@media(min-width:720px){
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "head head"
+                            "productss formss"
+                            "productss error";
+        grid-gap: 15px;
+        }
+}
